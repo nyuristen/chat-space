@@ -57,3 +57,5 @@ gem 'thor', '0.20.3'
 gem "haml-rails"
 
 gem 'font-awesome-sass'
+
+gem 'devise'
