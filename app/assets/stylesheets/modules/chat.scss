@@ -1,6 +1,6 @@
-.chat {	.chat {
+.chat {
   width: calc(100% - 300px);
-  min-height: 100vh;	
+  min-height: 100vh;
   .header {
     box-sizing: border-box;
     height: 100px;
@@ -37,11 +37,12 @@
     }
   }	  }
   .messages{
-    background-color: #FAFAFA；
+    background-color: #fafafa;
     box-sizing: border-box;
     margin-top: 100px;
     padding: 46px 40px 0;
     margin-bottom: 90px;
+    overflow-y: auto;
     .message {
       .upper-message {
         display: flex;
@@ -67,7 +68,7 @@
     }
   }
   .form {
-    background-color: #DDDDDD;
+    background-color: #dddddd;
     box-sizing: border-box;
     height: 90px;
     width: calc(100% - 300px);	
@@ -79,7 +80,7 @@
       float: left;
       height: 50px;
       width: calc(100% - 150px);
-    }	    }
+    }
     &__mask {
       background-color: $white;
       float: left;
