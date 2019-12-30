@@ -105,8 +105,9 @@ $(function(){
         $(".form__submit").prop("disabled", false);
       }
     })
-    .fail(function() {
-      console.log('error');
+    fail(function(){
+      alert('error');
+      $('.form__submit').prop('disabled', false);
     });
   }
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
