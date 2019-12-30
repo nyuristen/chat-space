@@ -38,8 +38,8 @@ $(function(){
           </div>`
         return html;
       };
-    }
-$('.new_message').on('submit', function(e){
+  }
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -51,15 +51,17 @@ $('.new_message').on('submit', function(e){
       processData: false,
       contentType: false
     })
-     .done(function(data){
-       var html = buildHTML(data);
-       $('.messages').append(html);
-       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
-       $('form')[0].reset();
-     })
-      .fail(function(){
-        alert('error');
-      });
-      return false;
+    .done(function(data){
+      let html = buildHTML(data);
+      $('.messages').append(html);
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
+      $('form__submit').prop('disabled', true);
+      $('form')[0].reset();
+    })
+    .fail(function(){
+      alert('error');
+      $('.form__submit').prop('disabled', false);
     });
+    return false;
+  });
 });
