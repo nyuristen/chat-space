@@ -8,7 +8,7 @@ $(function(){
             message.user_name +
           `</div>` +
           `<div class="upper-message__date">` +
-            message.created_at +
+            message.date +
           `</div>` +
         `</div>` +
         `<div class="lower-message">` +
@@ -26,7 +26,7 @@ $(function(){
             message.user_name +
           `</div>` +
           `<div class="upper-message__date">` +
-            message.created_at +
+            message.date +
           `</div>` +
         `</div>` +
         `<div class="lower-message">` +
@@ -43,7 +43,7 @@ $(function(){
             message.user_name +
           `</div>` +
           `<div class="upper-message__date">` +
-            message.created_at +
+            message.date +
           `</div>` +
         `</div>` +
         `<div class="lower-message">` +
@@ -105,7 +105,7 @@ $(function(){
         $(".form__submit").prop("disabled", false);
       }
     })
-    fail(function(){
+    .fail(function(){
       alert('error');
       $('.form__submit').prop('disabled', false);
     });

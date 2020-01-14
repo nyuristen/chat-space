@@ -9,4 +9,8 @@
 @import "modules/chat";
 @import "modules/user";
 @import "modules/group";
-@import "messages/messages.scss"
+@import "messages/messages.scss";
+
+.wrapper{
+  position: fixed;
+}
